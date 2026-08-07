@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 
+use App\Models\Project;
+use App\Observers\ProjectObserver;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -24,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureDefaults();
+        Project::observe(ProjectObserver::class);
     }
 
     /**
