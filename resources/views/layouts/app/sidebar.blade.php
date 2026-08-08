@@ -18,6 +18,10 @@
                 </flux:sidebar.group>
             </flux:sidebar.nav>
 
+            <flux:sidebar.item icon="folder" :href="route('projects.index')" :current="request()->routeIs('projects.*')" wire:navigate>
+                {{ __('Projects') }}
+            </flux:sidebar.item>
+
             <flux:spacer />
 
             <flux:sidebar.nav>
