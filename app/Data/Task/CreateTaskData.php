@@ -20,8 +20,7 @@ final readonly class CreateTaskData
         public TaskStatus $status,
         public TaskPriority $priority,
         public ?CarbonInterface $dueDate,
-    ) {
-    }
+    ) {}
 
     public static function fromArray(array $data): self
     {

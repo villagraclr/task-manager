@@ -10,8 +10,7 @@ final readonly class CreateProjectMemberData
         public string $name,
         public ?string $description,
         public int $ownerId,
-    ) {
-    }
+    ) {}
 
     public static function fromArray(array $data): self
     {

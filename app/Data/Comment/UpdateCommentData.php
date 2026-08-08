@@ -8,8 +8,7 @@ final readonly class UpdateCommentData
 {
     public function __construct(
         public string $body,
-    ) {
-    }
+    ) {}
 
     public static function fromArray(array $data): self
     {

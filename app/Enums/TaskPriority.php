@@ -24,7 +24,7 @@ enum TaskPriority: string
      */
     public function color(): string
     {
-        return match($this){
+        return match ($this) {
             self::LOW => 'gray',
             self::MEDIUM => 'blue',
             self::HIGH => 'orange',
@@ -46,9 +46,9 @@ enum TaskPriority: string
     public static function options(): array
     {
         return collect(self::cases())
-        ->mapWithKeys(fn(self $priority) => [
-            $priority->value => $priority->label()
-        ])
-        ->toArray();
+            ->mapWithKeys(fn (self $priority) => [
+                $priority->value => $priority->label(),
+            ])
+            ->toArray();
     }
 }

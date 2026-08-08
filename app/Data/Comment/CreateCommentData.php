@@ -10,8 +10,7 @@ final readonly class CreateCommentData
         public int $taskId,
         public int $userId,
         public string $body,
-    ) {
-    }
+    ) {}
 
     public static function fromArray(array $data): self
     {

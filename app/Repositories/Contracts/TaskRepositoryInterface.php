@@ -7,7 +7,6 @@ namespace App\Repositories\Contracts;
 use App\Data\Task\CreateTaskData;
 use App\Data\Task\UpdateTaskData;
 use App\Models\Task;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
 
 interface TaskRepositoryInterface
@@ -29,7 +28,7 @@ interface TaskRepositoryInterface
     public function update(Task $task, UpdateTaskData $data): Task;
 
     public function delete(Task $task): bool;
-    
+
     public function restore(Task $task): bool;
 
     public function forceDelete(Task $task): bool;

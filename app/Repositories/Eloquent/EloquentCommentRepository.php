@@ -43,6 +43,7 @@ class EloquentCommentRepository implements CommentRepositoryInterface
     public function update(Comment $comment, UpdateCommentData $data): Comment
     {
         $comment->update($data->toArray());
+
         return $comment->fresh();
     }
 

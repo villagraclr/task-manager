@@ -33,18 +33,18 @@ enum TaskStatus: string
     public static function options(): array
     {
         return collect(self::cases())
-        ->mapWithKeys(fn(self $status) => [
-            $status->value => $status->label()
-        ])
-        ->toArray();
+            ->mapWithKeys(fn (self $status) => [
+                $status->value => $status->label(),
+            ])
+            ->toArray();
     }
-    
+
     /**
      * Sugested color to UI
      */
     public function color(): string
     {
-        return match($this) {
+        return match ($this) {
             self::PENDING => 'gray',
             self::IN_PROGRESS => 'blue',
             self::COMPLETED => 'green',

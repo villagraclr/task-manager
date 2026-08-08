@@ -12,14 +12,12 @@ use App\Models\Project;
 use App\Models\User;
 use App\Repositories\Contracts\ProjectRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class ProjectService
 {
     public function __construct(
         private readonly ProjectRepositoryInterface $projectRepository
-    ) {
-    }
+    ) {}
 
     public function getAll(): Collection
     {
@@ -63,7 +61,7 @@ class ProjectService
     public function addMember(Project $project, User $user): void
     {
         if ($user->id === $project->owner_id) {
-            throw new CannotAddOwnerAsMemberException();
+            throw new CannotAddOwnerAsMemberException;
         }
 
         $this->projectRepository->addMember($project, $user);

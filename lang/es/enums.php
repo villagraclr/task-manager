@@ -12,6 +12,6 @@ return [
         'low' => 'Baja',
         'medium' => 'Media',
         'high' => 'Alta',
-        'urgent' => 'Urgente'
-    ]
+        'urgent' => 'Urgente',
+    ],
 ];

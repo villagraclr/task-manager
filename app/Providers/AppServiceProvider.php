@@ -2,14 +2,13 @@
 
 namespace App\Providers;
 
+use App\Models\Project;
+use App\Observers\ProjectObserver;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
-
-use App\Models\Project;
-use App\Observers\ProjectObserver;
 
 class AppServiceProvider extends ServiceProvider
 {

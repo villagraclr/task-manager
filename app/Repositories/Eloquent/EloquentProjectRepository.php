@@ -42,6 +42,7 @@ class EloquentProjectRepository implements ProjectRepositoryInterface
     public function update(Project $project, UpdateProjectData $data): Project
     {
         $project->update($data->toArray());
+
         return $project->fresh();
     }
 

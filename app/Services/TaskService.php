@@ -10,12 +10,12 @@ use App\Models\Task;
 use App\Repositories\Contracts\TaskRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 
-class TaskService{
+class TaskService
+{
     public function __construct(
         private readonly TaskRepositoryInterface $taskRepository
-    ) {
+    ) {}
 
-    }
     public function all(): Collection
     {
         return $this->taskRepository->all();

@@ -14,8 +14,7 @@ class CommentService
 {
     public function __construct(
         private readonly CommentRepositoryInterface $commentRepository
-    ) {
-    }
+    ) {}
 
     public function getByTask(int $taskId): Collection
     {
